@@ -1,0 +1,99 @@
+@for $i from 1 through 9 {
+  .font-weight-#{$i}00 {
+    font-weight: #{$i}00;
+  }
+}
+
+@each $direction, $property in (t: top, b: bottom, l: left, r: right) {
+  @each $size in 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40 {
+    .m#{$direction}-#{$size} {
+      margin-#{$property}: #{$size}px;
+    }
+  }
+}
+
+@each $direction, $property in (t: top, b: bottom, l: left, r: right) {
+  @each $size in 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40 {
+    .p#{$direction}-#{$size} {
+      padding-#{$property}: #{$size}px;
+    }
+  }
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.mc {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.self-start {
+  align-items: self-start;
+}
+
+.self-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.select {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.pointer {
+  cursor: pointer;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
